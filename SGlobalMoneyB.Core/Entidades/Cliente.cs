@@ -8,6 +8,6 @@ namespace SGlobalMoneyB.Core.Entidades
 {
     public class Cliente
     {
-
+        int id { get; set; }
     }
 }

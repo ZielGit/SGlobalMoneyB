@@ -51,11 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContextoDB\Contexto_SGlobalMoneyB_DB.cs" />
+    <Compile Include="Inicializador\SGlobalMoneyB_Inicializador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SGlobalMoneyB.Core\SGlobalMoneyB.Core.csproj">
+      <Project>{0FE55BB8-FD11-4F8D-8431-A401DE47C7F3}</Project>
+      <Name>SGlobalMoneyB.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

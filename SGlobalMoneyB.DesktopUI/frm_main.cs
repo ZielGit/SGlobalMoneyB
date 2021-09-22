@@ -16,5 +16,44 @@ namespace SGlobalMoneyB.DesktopUI
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void abrirformulariohijo(object forhijo)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+
+            Form fh = forhijo as Form;
+            fh.TopLevel = false;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            abrirformulariohijo(new frm_usuarios_mnt());
+            this.Cursor = Cursors.Default;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            abrirformulariohijo(new frm_reporte_clientes());
+            this.Cursor = Cursors.Default;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            abrirformulariohijo(new frm_grupos_mnt());
+            this.Cursor = Cursors.Default;
+        }
     }
 }

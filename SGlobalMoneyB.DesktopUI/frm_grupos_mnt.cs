@@ -1,5 +1,7 @@
 ﻿using SGlobalMoneyB.Core.Entidades;
+using SGlobalMoneyB.Core.Entidades.ViewModel;
 using SGlobalMoneyB.Infraestructura.ReglasNegocio;
+using SGlobalMoneyB.Infraestructura.ContextoDB;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +17,7 @@ namespace SGlobalMoneyB.DesktopUI
     public partial class frm_grupos_mnt : Form
     {
         private GrupoRN grupoRN;
+        private string buscarvariable;
         private BindingSource bindingSource_grupo = new BindingSource();
         public bool estado;
         public frm_grupos_mnt()
@@ -95,6 +98,26 @@ namespace SGlobalMoneyB.DesktopUI
         private void bindingNavigatorButton1_Click(object sender, EventArgs e)
         {
             frm_grupos_mnt_Load(sender, e);
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            using (Contexto_SGlobalMoneyB_DB db = new Contexto_SGlobalMoneyB_DB())
+            {
+                var lst = (from d in db.grupos
+                           select new grupo
+                           {
+                               Id = d.Id,
+                               Nombre = d.Nombre,
+                           
+                           }).AsQueryable();
+                if (!toolStripTxbBuscar.Text.Trim().Equals(""))
+                {
+                    lst = lst.Where(d => d.Nombre.Contains(toolStripTxbBuscar.Text.Trim()));
+                    buscarvariable = toolStripTxbBuscar.Text;
+                }
+                dataGridView1.DataSource = lst.ToList();
+            }
         }
     }
 }

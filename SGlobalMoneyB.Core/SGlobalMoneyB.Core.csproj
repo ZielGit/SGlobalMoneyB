@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Grupo.cs" />
     <Compile Include="Entidades\Referido.cs" />
     <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Entidades\ViewModel\grupo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\IGrupo.cs" />
     <Compile Include="Repositorios\IReferido.cs" />

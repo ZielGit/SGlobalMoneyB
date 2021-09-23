@@ -76,6 +76,8 @@ namespace SGlobalMoneyB.DesktopUI
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolStripTextNombre = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -450,7 +452,9 @@ namespace SGlobalMoneyB.DesktopUI
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorButton1});
+            this.bindingNavigatorButton1,
+            this.toolStripTextNombre,
+            this.toolStripButton1});
             this.bindingNavigator1.Location = new System.Drawing.Point(301, 109);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -458,7 +462,7 @@ namespace SGlobalMoneyB.DesktopUI
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(234, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(481, 25);
             this.bindingNavigator1.TabIndex = 5;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -544,6 +548,22 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // toolStripTextNombre
+            // 
+            this.toolStripTextNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextNombre.Name = "toolStripTextNombre";
+            this.toolStripTextNombre.Size = new System.Drawing.Size(100, 25);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(114, 22);
+            this.toolStripButton1.Text = "Buscar por Nombre";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // frm_usuarios_mnt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,5 +644,7 @@ namespace SGlobalMoneyB.DesktopUI
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextNombre;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using SGlobalMoneyB.Core.Entidades;
 using SGlobalMoneyB.Infraestructura.ReglasNegocio;
+using SGlobalMoneyB.Infraestructura.ContextoDB;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,12 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SGlobalMoneyB.Core.Entidades.ViewModel;
 
 namespace SGlobalMoneyB.DesktopUI
 {
     public partial class frm_usuarios_mnt : Form
     {
         private UsuarioRN usuarioRN;
+        private string buscarvariable;
         private BindingSource bindingSource_usuario = new BindingSource();
         public bool estado;
         public frm_usuarios_mnt()
@@ -146,6 +149,34 @@ namespace SGlobalMoneyB.DesktopUI
 
                     tabControl1.SelectedTab = tabPage2;
                 }
+            }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            using (Contexto_SGlobalMoneyB_DB db = new Contexto_SGlobalMoneyB_DB())
+            {
+                var lst = (from d in db.usuarios
+                           select new usuario
+                           {
+                               Id = d.Id,
+                               Nombre = d.Nombre,
+                               Apellido = d.Apellido,
+                               DNI = d.DNI,
+                               Edad = d.Edad,
+                               Genero = d.Genero,
+                               Celular = d.Celular,
+                               Direccion = d.Direccion,
+                               Monto_Inicial = d.Monto_Inicial,
+                               Grupo = d.Grupo,
+                               Fecha_Ingreso = d.Fecha_Ingreso
+                           }).AsQueryable();
+                if (!toolStripTextNombre.Text.Trim().Equals(""))
+                {
+                    lst = lst.Where(d => d.Nombre.Contains(toolStripTextNombre.Text.Trim()));
+                    buscarvariable = toolStripTextNombre.Text;
+                }
+                dataGridView1.DataSource = lst.ToList();
             }
         }
     }

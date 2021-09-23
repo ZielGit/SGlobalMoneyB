@@ -8,17 +8,17 @@ namespace SGlobalMoneyB.Core.Entidades
 {
     public class Usuario
     {
-        int Id { get; set; }
-        string Nombre { get; set; }
-        string Apellido { get; set; }
-        int DNI { get; set; }
-        int Edad { get; set; }
-        string Genero { get; set; }
-        int Celular { get; set; }
-        string Referido { get; set; }
-        string Dirección { get; set; }
-        int Monto_Inicial { get; set; }
-        string Grupo { get; set; }
-        DateTime Fecha_Ingreso { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int DNI { get; set; }
+        public int Edad { get; set; }
+        public string Genero { get; set; }
+        public int Celular { get; set; }
+        public string Referido { get; set; }
+        public string Dirección { get; set; }
+        public int Monto_Inicial { get; set; }
+        public string Grupo { get; set; }
+        public DateTime Fecha_Ingreso { get; set; }
     }
 }

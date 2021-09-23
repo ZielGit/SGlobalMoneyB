@@ -8,14 +8,14 @@ namespace SGlobalMoneyB.Core.Entidades
 {
     public class Referido
     {
-        int Id { get; set; }
-        string Nombre { get; set; }
-        string Apellido { get; set; }
-        int Edad { get; set; }
-        string Genero { get; set; }
-        int Celular { get; set; }
-        string Dirección { get; set; }
-        int Monto_Inicial { get; set; }
-        string Grupo { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int Edad { get; set; }
+        public string Genero { get; set; }
+        public int Celular { get; set; }
+        public string Dirección { get; set; }
+        public int Monto_Inicial { get; set; }
+        public string Grupo { get; set; }
     }
 }

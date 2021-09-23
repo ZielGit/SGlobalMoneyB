@@ -124,7 +124,7 @@ namespace SGlobalMoneyB.DesktopUI
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button3.Size = new System.Drawing.Size(233, 73);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Reporte de Clientes";
+            this.button3.Text = "Reporte de Usuarios";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.button3, "Reporte de Clientes");
             this.button3.UseVisualStyleBackColor = false;

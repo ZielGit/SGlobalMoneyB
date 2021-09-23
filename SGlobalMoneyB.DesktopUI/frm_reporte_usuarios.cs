@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SGlobalMoneyB.DesktopUI
 {
-    public partial class frm_reporte_clientes : Form
+    public partial class frm_reporte_usuarios : Form
     {
-        public frm_reporte_clientes()
+        public frm_reporte_usuarios()
         {
             InitializeComponent();
         }

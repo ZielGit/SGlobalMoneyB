@@ -45,7 +45,7 @@ namespace SGlobalMoneyB.DesktopUI
         private void button3_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            abrirformulariohijo(new frm_reporte_clientes());
+            abrirformulariohijo(new frm_reporte_usuarios());
             this.Cursor = Cursors.Default;
         }
 

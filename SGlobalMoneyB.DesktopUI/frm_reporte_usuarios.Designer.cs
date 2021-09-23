@@ -1,7 +1,7 @@
 ﻿
 namespace SGlobalMoneyB.DesktopUI
 {
-    partial class frm_reporte_clientes
+    partial class frm_reporte_usuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace SGlobalMoneyB.DesktopUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_reporte_clientes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_reporte_usuarios));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();

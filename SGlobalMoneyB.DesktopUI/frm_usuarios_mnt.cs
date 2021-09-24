@@ -19,6 +19,7 @@ namespace SGlobalMoneyB.DesktopUI
         private UsuarioRN usuarioRN;
         private string buscarvariable;
         private BindingSource bindingSource_usuario = new BindingSource();
+        Contexto_SGlobalMoneyB_DB contexto;
         public bool estado;
         public frm_usuarios_mnt()
         {
@@ -41,21 +42,20 @@ namespace SGlobalMoneyB.DesktopUI
             textBox3.Clear();
             textBox4.Clear();
             textBox5.Clear();
-            textBox6.Clear();
-            textBox7.Clear();
+            //textBox7.Clear();
             textBox8.Clear();
             textBox9.Clear();
-            textBox10.Clear();
-            textBox11.Clear();
+            //textBox10.Clear();
+            //textBox11.Clear();
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             #region Bloque que valida los objetos de entrada
             if (string.IsNullOrEmpty(Tbx_Nombre.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text)
-                || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(textBox6.Text)
-                || string.IsNullOrEmpty(textBox7.Text) || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text)
-                || string.IsNullOrEmpty(textBox10.Text) || string.IsNullOrEmpty(textBox11.Text))
+                || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(comboBox1.Text)
+                || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text) || string.IsNullOrEmpty(comboBox2.Text)
+                || string.IsNullOrEmpty(dateTimePicker1.Text))
             {
                 panel2.BackColor = Color.FromArgb(219, 81, 69);
                 MessageBox.Show("Completa los Datos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -84,7 +84,7 @@ namespace SGlobalMoneyB.DesktopUI
                     Direccion = textBox8.Text,
                     Monto_Inicial = int.Parse(textBox9.Text),
                     //Grupo = textBox10.Text,
-                    //Fecha_Ingreso = dateTimePicker1.Value.Date
+                    Fecha_Ingreso = dateTimePicker1.Value.Date
                 };
                 usuarioRN.Agregar(usuario);
                 MessageBox.Show("Datos Guardados");
@@ -99,11 +99,11 @@ namespace SGlobalMoneyB.DesktopUI
                 usuario.Edad = int.Parse(textBox3.Text);
                 usuario.Genero = textBox4.Text;
                 usuario.Celular = int.Parse(textBox5.Text);
-                //usuario.Referido = textBox7.Text;
+                //usuario.Referido = comboBox1.Text.ToString();
                 usuario.Direccion = textBox8.Text;
                 usuario.Monto_Inicial = int.Parse(textBox9.Text);
                 //usuario.Grupo = textBox10.Text;
-                //usuario.Fecha_Ingreso = dateTimePicker1.Value.Date;
+                usuario.Fecha_Ingreso = dateTimePicker1.Value.Date;
 
                 usuarioRN.Modificar(usuario);
                 MessageBox.Show("Datos actualizados con éxito...");
@@ -141,11 +141,11 @@ namespace SGlobalMoneyB.DesktopUI
                     textBox3.Text = usuario.Edad.ToString();
                     textBox4.Text = usuario.Genero;
                     textBox5.Text = usuario.Celular.ToString();
-                    //textBox7.Text = usuario.Referido;
+                    comboBox1.Text = usuario.Referido.ToString();
                     textBox8.Text = usuario.Direccion;
                     textBox9.Text = usuario.Monto_Inicial.ToString();
-                    //textBox10.Text = usuario.Grupo;
-                    //Fecha ingreso
+                    comboBox2.Text = usuario.Grupo.ToString();
+                    dateTimePicker1.Text = usuario.Fecha_Ingreso.ToString();
 
                     tabControl1.SelectedTab = tabPage2;
                 }
@@ -179,5 +179,15 @@ namespace SGlobalMoneyB.DesktopUI
                 dataGridView1.DataSource = lst.ToList();
             }
         }
+        /*
+        public void cargar_grupos()
+        {
+            //contexto.Open();
+            contexto = new Contexto_SGlobalMoneyB_DB();
+            SqlCommand cmd = new SqlCommand("SELECT id_Mantenimiento, Nombre_Mantenimiento FROM Mantenimiento", contexto);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+        }*/
     }
 }

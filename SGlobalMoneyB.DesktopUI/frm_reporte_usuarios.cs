@@ -16,6 +16,7 @@ namespace SGlobalMoneyB.DesktopUI
     public partial class frm_reporte_usuarios : Form
     {
         Reportes reportes;
+        //public int id;
         public frm_reporte_usuarios()
         {
             InitializeComponent();
@@ -32,11 +33,9 @@ namespace SGlobalMoneyB.DesktopUI
             }
             else
             {
-                frm_report_dni dni = new frm_report_dni();
-                dni.buscar = DNI.Text;
+                frm_report_nombre dni = new frm_report_nombre();
+                dni.buscar = Nombre.Text;
                 dni.ShowDialog();
-
-
             }
         }
 
@@ -47,6 +46,7 @@ namespace SGlobalMoneyB.DesktopUI
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             if (string.IsNullOrEmpty(DNI.Text))
             {
                 DNI.BackColor = Color.FromArgb(219, 81, 69);
@@ -56,9 +56,9 @@ namespace SGlobalMoneyB.DesktopUI
             }
             else
             {
-
                 //errorProvider1.SetError(Nombre, string.Empty);
                 frm_report_dni dni = new frm_report_dni();
+                //id = int.Parse(dni.Text);
                 dni.buscar = DNI.Text;
                 dni.ShowDialog();
 

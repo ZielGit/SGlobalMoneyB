@@ -165,3 +165,5 @@ D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobal
 D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.exe
 D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.pdb
 D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.frm_report_dni.resources
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.frm_report_dni.resources
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.frm_report_nombre.resources

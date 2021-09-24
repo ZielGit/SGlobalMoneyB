@@ -81,7 +81,7 @@ namespace SGlobalMoneyB.DesktopUI
                 {
                     Nombre = Tbx_Nombre.Text,
                     Apellido = textBox1.Text,
-                    DNI = int.Parse(textBox2.Text),
+                    DNI = textBox2.Text,
                     Edad = int.Parse(textBox3.Text),
                     Genero = textBox4.Text,
                     Celular = int.Parse(textBox5.Text),
@@ -100,7 +100,7 @@ namespace SGlobalMoneyB.DesktopUI
 
                 usuario.Nombre = Tbx_Nombre.Text;
                 usuario.Apellido = textBox1.Text;
-                usuario.DNI = int.Parse(textBox2.Text);
+                usuario.DNI = textBox2.Text;
                 usuario.Edad = int.Parse(textBox3.Text);
                 usuario.Genero = textBox4.Text;
                 usuario.Celular = int.Parse(textBox5.Text);
@@ -142,7 +142,7 @@ namespace SGlobalMoneyB.DesktopUI
 
                     Tbx_Nombre.Text = usuario.Nombre;
                     textBox1.Text = usuario.Apellido;
-                    textBox2.Text = usuario.DNI.ToString();
+                    textBox2.Text = usuario.DNI;
                     textBox3.Text = usuario.Edad.ToString();
                     textBox4.Text = usuario.Genero;
                     textBox5.Text = usuario.Celular.ToString();

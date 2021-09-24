@@ -1,5 +1,4 @@
-﻿using SGlobalMoneyB.Core.Entidades;
-using SGlobalMoneyB.Core.Entidades.ViewModel;
+﻿using SGlobalMoneyB.Core.Entidades.ViewModel;
 using SGlobalMoneyB.Infraestructura.ContextoDB;
 using System;
 using System.Collections.Generic;
@@ -13,22 +12,28 @@ using System.Windows.Forms;
 
 namespace SGlobalMoneyB.DesktopUI
 {
-    public partial class frm_report_dni : Form
+    public partial class frm_report_nombre : Form
     {
         public string buscar;
-        //public int id = 0;
-        public frm_report_dni()
+        public frm_report_nombre()
         {
             InitializeComponent();
         }
 
-        private void frm_report_dni_Load(object sender, EventArgs e)
+        private void frm_report_nombre_Load(object sender, EventArgs e)
         {
 
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void reportViewer1_Load_1(object sender, EventArgs e)
         {
             using (Contexto_SGlobalMoneyB_DB db = new Contexto_SGlobalMoneyB_DB())
             {
@@ -48,13 +53,13 @@ namespace SGlobalMoneyB.DesktopUI
                                referido = d.referido,
                                Fecha_Ingreso = d.Fecha_Ingreso
                            }).AsQueryable();
-                if (!buscar.Equals(""))
+                if (!buscar.Trim().Equals(""))
                 {
-                    lst = lst.Where(d => d.DNI.Contains(buscar.Trim().Trim()));
+                    lst = lst.Where(d => d.Nombre.Contains(buscar.Trim().Trim()));
                 }
                 oReporteUsuarioBindingSource.DataSource = lst.ToList();
-            }
 
+            }
         }
     }
 }

@@ -80,10 +80,10 @@ namespace SGlobalMoneyB.DesktopUI
                     Edad = int.Parse(textBox3.Text),
                     Genero = textBox4.Text,
                     Celular = int.Parse(textBox5.Text),
-                    Referido = textBox7.Text,
+                    //Referido = textBox7.Text,
                     Direccion = textBox8.Text,
                     Monto_Inicial = int.Parse(textBox9.Text),
-                    Grupo = textBox10.Text,
+                    //Grupo = textBox10.Text,
                     //Fecha_Ingreso = dateTimePicker1.Value.Date
                 };
                 usuarioRN.Agregar(usuario);
@@ -99,10 +99,10 @@ namespace SGlobalMoneyB.DesktopUI
                 usuario.Edad = int.Parse(textBox3.Text);
                 usuario.Genero = textBox4.Text;
                 usuario.Celular = int.Parse(textBox5.Text);
-                usuario.Referido = textBox7.Text;
+                //usuario.Referido = textBox7.Text;
                 usuario.Direccion = textBox8.Text;
                 usuario.Monto_Inicial = int.Parse(textBox9.Text);
-                usuario.Grupo = textBox10.Text;
+                //usuario.Grupo = textBox10.Text;
                 //usuario.Fecha_Ingreso = dateTimePicker1.Value.Date;
 
                 usuarioRN.Modificar(usuario);
@@ -141,10 +141,10 @@ namespace SGlobalMoneyB.DesktopUI
                     textBox3.Text = usuario.Edad.ToString();
                     textBox4.Text = usuario.Genero;
                     textBox5.Text = usuario.Celular.ToString();
-                    textBox7.Text = usuario.Referido;
+                    //textBox7.Text = usuario.Referido;
                     textBox8.Text = usuario.Direccion;
                     textBox9.Text = usuario.Monto_Inicial.ToString();
-                    textBox10.Text = usuario.Grupo;
+                    //textBox10.Text = usuario.Grupo;
                     //Fecha ingreso
 
                     tabControl1.SelectedTab = tabPage2;
@@ -168,7 +168,7 @@ namespace SGlobalMoneyB.DesktopUI
                                Celular = d.Celular,
                                Direccion = d.Direccion,
                                Monto_Inicial = d.Monto_Inicial,
-                               Grupo = d.Grupo,
+                               //Grupo = d.Grupo,
                                Fecha_Ingreso = d.Fecha_Ingreso
                            }).AsQueryable();
                 if (!toolStripTextNombre.Text.Trim().Equals(""))

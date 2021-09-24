@@ -16,6 +16,8 @@ namespace SGlobalMoneyB.Core.Entidades
         public int Celular { get; set; }
         public string Dirección { get; set; }
         public int Monto_Inicial { get; set; }
-        public string Grupo { get; set; }
+        //public string Grupo { get; set; }
+        public virtual Grupo Grupo { get; set; }
+        public virtual List<Usuario> usuarios { get; set; }
     }
 }

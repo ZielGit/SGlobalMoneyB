@@ -10,5 +10,7 @@ namespace SGlobalMoneyB.Core.Entidades
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public virtual List<Usuario> usuarios { get; set; }
+        public virtual List<Referido> referidos { get; set; }
     }
 }

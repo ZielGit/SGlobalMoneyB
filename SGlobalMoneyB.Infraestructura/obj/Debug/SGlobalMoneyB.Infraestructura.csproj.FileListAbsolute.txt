@@ -12,3 +12,17 @@ D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infrae
 D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.csproj.CopyComplete
 D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.dll
 D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.pdb
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\SGlobalMoneyB.Infraestructura.dll.config
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\SGlobalMoneyB.Infraestructura.dll
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\SGlobalMoneyB.Infraestructura.pdb
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\EntityFramework.dll
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\EntityFramework.SqlServer.dll
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\SGlobalMoneyB.Core.dll
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\SGlobalMoneyB.Core.pdb
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\EntityFramework.xml
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\EntityFramework.SqlServer.xml
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.csproj.AssemblyReference.cache
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.csproj.CoreCompileInputs.cache
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.csproj.CopyComplete
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.dll
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.pdb

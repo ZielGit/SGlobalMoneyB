@@ -92,6 +92,12 @@
     <Compile Include="frm_reporte_usuarios.Designer.cs">
       <DependentUpon>frm_reporte_usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_report_dni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_report_dni.Designer.cs">
+      <DependentUpon>frm_report_dni.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_usuarios_mnt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_reporte_usuarios.resx">
       <DependentUpon>frm_reporte_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_report_dni.resx">
+      <DependentUpon>frm_report_dni.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_usuarios_mnt.resx">
       <DependentUpon>frm_usuarios_mnt.cs</DependentUpon>

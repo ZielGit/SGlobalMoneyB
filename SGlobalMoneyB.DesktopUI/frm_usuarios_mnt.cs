@@ -76,6 +76,7 @@ namespace SGlobalMoneyB.DesktopUI
             #region Haciendo datos persistentes en el contexto (BD)
             if (estado)
             {
+                usuarioRN = new UsuarioRN();
                 Usuario usuario = new Usuario
                 {
                     Nombre = Tbx_Nombre.Text,
@@ -84,10 +85,10 @@ namespace SGlobalMoneyB.DesktopUI
                     Edad = int.Parse(textBox3.Text),
                     Genero = textBox4.Text,
                     Celular = int.Parse(textBox5.Text),
-                    //Referido = comboBox1.SelectedText,
+                    referido = comboBox1.Text,
                     Direccion = textBox8.Text,
                     Monto_Inicial = int.Parse(textBox9.Text),
-                    //Grupo.Id = comboBox2.Text,
+                    grupo = comboBox2.Text,
                     Fecha_Ingreso = dateTimePicker1.Value.Date
                 };
                 usuarioRN.Agregar(usuario);
@@ -103,10 +104,10 @@ namespace SGlobalMoneyB.DesktopUI
                 usuario.Edad = int.Parse(textBox3.Text);
                 usuario.Genero = textBox4.Text;
                 usuario.Celular = int.Parse(textBox5.Text);
-                usuario.Referido.Nombre = comboBox1.Text;
+                usuario.referido = comboBox1.Text;
                 usuario.Direccion = textBox8.Text;
                 usuario.Monto_Inicial = int.Parse(textBox9.Text);
-                usuario.Grupo.Nombre = comboBox2.Text;
+                usuario.grupo = comboBox2.Text;
                 usuario.Fecha_Ingreso = dateTimePicker1.Value.Date;
 
                 usuarioRN.Modificar(usuario);
@@ -145,10 +146,10 @@ namespace SGlobalMoneyB.DesktopUI
                     textBox3.Text = usuario.Edad.ToString();
                     textBox4.Text = usuario.Genero;
                     textBox5.Text = usuario.Celular.ToString();
-                    comboBox1.Text = usuario.Referido.Nombre;
+                    comboBox1.Text = usuario.referido;
                     textBox8.Text = usuario.Direccion;
                     textBox9.Text = usuario.Monto_Inicial.ToString();
-                    comboBox2.Text = usuario.Grupo.Nombre;
+                    comboBox2.Text = usuario.grupo;
                     dateTimePicker1.Text = usuario.Fecha_Ingreso.ToString();
 
                     tabControl1.SelectedTab = tabPage2;
@@ -187,6 +188,7 @@ namespace SGlobalMoneyB.DesktopUI
         
         public void cargar_grupos()
         {
+            
             con.Open();
             //Contexto_SGlobalMoneyB_DB contexto = new Contexto_SGlobalMoneyB_DB();
             //contexto.Open();

@@ -26,6 +26,8 @@ namespace SGlobalMoneyB.Infraestructura.ReglasNegocio
                 Celular = u.Celular,
                 Direccion = u.Direccion,
                 Monto_Inicial = u.Monto_Inicial,
+                referido = u.referido,
+                grupo = u.grupo,
                 Fecha_Ingreso = u.Fecha_Ingreso
             }).AsQueryable<oReporteUsuario>();
         }

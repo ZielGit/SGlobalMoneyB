@@ -17,6 +17,8 @@ namespace SGlobalMoneyB.Core.Entidades
         public int Celular { get; set; }
         public string Direccion { get; set; }
         public int Monto_Inicial { get; set; }
+        public string referido { get; set; }
+        public string grupo { get; set; }
         public DateTime Fecha_Ingreso { get; set; }
     }
 }

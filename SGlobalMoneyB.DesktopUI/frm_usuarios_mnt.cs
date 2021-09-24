@@ -20,7 +20,7 @@ namespace SGlobalMoneyB.DesktopUI
         private UsuarioRN usuarioRN;
         private string buscarvariable;
         private BindingSource bindingSource_usuario = new BindingSource();
-        Contexto_SGlobalMoneyB_DB contexto;
+        //Contexto_SGlobalMoneyB_DB contexto;
         SqlConnection con = new SqlConnection(@"Data Source=.;initial catalog=SGlobalMoneyB ;Integrated Security=true;");
         public bool estado;
         public frm_usuarios_mnt()
@@ -84,10 +84,10 @@ namespace SGlobalMoneyB.DesktopUI
                     Edad = int.Parse(textBox3.Text),
                     Genero = textBox4.Text,
                     Celular = int.Parse(textBox5.Text),
-                    //Referido = textBox7.Text,
+                    //Referido = comboBox1.SelectedText,
                     Direccion = textBox8.Text,
                     Monto_Inicial = int.Parse(textBox9.Text),
-                    //Grupo = textBox10.Text,
+                    //Grupo.Id = comboBox2.Text,
                     Fecha_Ingreso = dateTimePicker1.Value.Date
                 };
                 usuarioRN.Agregar(usuario);
@@ -103,10 +103,10 @@ namespace SGlobalMoneyB.DesktopUI
                 usuario.Edad = int.Parse(textBox3.Text);
                 usuario.Genero = textBox4.Text;
                 usuario.Celular = int.Parse(textBox5.Text);
-                //usuario.Referido = comboBox1.Text.ToString();
+                usuario.Referido.Nombre = comboBox1.Text;
                 usuario.Direccion = textBox8.Text;
                 usuario.Monto_Inicial = int.Parse(textBox9.Text);
-                //usuario.Grupo = textBox10.Text;
+                usuario.Grupo.Nombre = comboBox2.Text;
                 usuario.Fecha_Ingreso = dateTimePicker1.Value.Date;
 
                 usuarioRN.Modificar(usuario);
@@ -145,10 +145,10 @@ namespace SGlobalMoneyB.DesktopUI
                     textBox3.Text = usuario.Edad.ToString();
                     textBox4.Text = usuario.Genero;
                     textBox5.Text = usuario.Celular.ToString();
-                    comboBox1.Text = usuario.Referido.ToString();
+                    comboBox1.Text = usuario.Referido.Nombre;
                     textBox8.Text = usuario.Direccion;
                     textBox9.Text = usuario.Monto_Inicial.ToString();
-                    comboBox2.Text = usuario.Grupo.ToString();
+                    comboBox2.Text = usuario.Grupo.Nombre;
                     dateTimePicker1.Text = usuario.Fecha_Ingreso.ToString();
 
                     tabControl1.SelectedTab = tabPage2;
@@ -172,8 +172,9 @@ namespace SGlobalMoneyB.DesktopUI
                                Celular = d.Celular,
                                Direccion = d.Direccion,
                                Monto_Inicial = d.Monto_Inicial,
-                               //Grupo = d.Grupo,
-                               Fecha_Ingreso = d.Fecha_Ingreso
+                               Fecha_Ingreso = d.Fecha_Ingreso,
+                               //Grupo = d.Grupo.Id.ToString(),
+                               //Referido = d.Referido.Id.ToString()
                            }).AsQueryable();
                 if (!toolStripTextNombre.Text.Trim().Equals(""))
                 {

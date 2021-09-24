@@ -57,10 +57,6 @@ namespace SGlobalMoneyB.DesktopUI
                 }
                 reportViewer1.RefreshReport();
             }
-
-           
-            
-            
         }
 
         private void frm_reporte_usuarios_Load(object sender, EventArgs e)

@@ -9,3 +9,4 @@ D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Core\obj\Debug\SGlobalMoney
 D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Core\obj\Debug\SGlobalMoneyB.Core.csproj.CoreCompileInputs.cache
 D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Core\obj\Debug\SGlobalMoneyB.Core.dll
 D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.Core\obj\Debug\SGlobalMoneyB.Core.pdb
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Core\obj\Debug\SGlobalMoneyB.Core.csproj.AssemblyReference.cache

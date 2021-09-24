@@ -1,5 +1,6 @@
 ﻿using SGlobalMoneyB.Core.Entidades.ViewModel;
 using SGlobalMoneyB.Infraestructura.ContextoDB;
+using SGlobalMoneyB.Infraestructura.ReglasNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace SGlobalMoneyB.DesktopUI
 {
     public partial class frm_reporte_usuarios : Form
     {
+        Reportes reportes;
         public frm_reporte_usuarios()
         {
             InitializeComponent();
@@ -53,6 +55,7 @@ namespace SGlobalMoneyB.DesktopUI
                     }
                     oReporteUsuarioBindingSource.DataSource = lst.ToList();
                 }
+                reportViewer1.RefreshReport();
             }
 
            

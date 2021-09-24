@@ -1,0 +1,14 @@
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\SGlobalMoneyB.Infraestructura.dll.config
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\SGlobalMoneyB.Infraestructura.dll
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\SGlobalMoneyB.Infraestructura.pdb
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\EntityFramework.dll
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\EntityFramework.SqlServer.dll
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\SGlobalMoneyB.Core.dll
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\SGlobalMoneyB.Core.pdb
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\EntityFramework.xml
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\bin\Debug\EntityFramework.SqlServer.xml
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.csproj.AssemblyReference.cache
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.csproj.CoreCompileInputs.cache
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.csproj.CopyComplete
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.dll
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Infraestructura\obj\Debug\SGlobalMoneyB.Infraestructura.pdb

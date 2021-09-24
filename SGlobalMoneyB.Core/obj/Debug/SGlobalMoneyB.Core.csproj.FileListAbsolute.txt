@@ -1,0 +1,5 @@
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Core\bin\Debug\SGlobalMoneyB.Core.dll
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Core\bin\Debug\SGlobalMoneyB.Core.pdb
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Core\obj\Debug\SGlobalMoneyB.Core.csproj.CoreCompileInputs.cache
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Core\obj\Debug\SGlobalMoneyB.Core.dll
+D:\Estudios\Proyectos\Proyectos C#\Escritorio\SGlobalMoneyB\SGlobalMoneyB.Core\obj\Debug\SGlobalMoneyB.Core.pdb

@@ -123,8 +123,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rpt_usuario.rdlc" />
     <EmbeddedResource Include="rp_reporte_nombre.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SGlobalMoneyB.Core.Entidades.oReporteUsuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

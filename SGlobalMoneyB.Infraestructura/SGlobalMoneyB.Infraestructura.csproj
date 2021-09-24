@@ -56,6 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReglasNegocio\GrupoRN.cs" />
     <Compile Include="ReglasNegocio\ReferidoRN.cs" />
+    <Compile Include="ReglasNegocio\Reportes.cs" />
     <Compile Include="ReglasNegocio\UsuarioRN.cs" />
   </ItemGroup>
   <ItemGroup>

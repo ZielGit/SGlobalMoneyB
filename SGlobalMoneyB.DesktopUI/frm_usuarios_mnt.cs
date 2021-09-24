@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SGlobalMoneyB.Core.Entidades.ViewModel;
+using System.Data.SqlClient;
 
 namespace SGlobalMoneyB.DesktopUI
 {
@@ -20,10 +21,13 @@ namespace SGlobalMoneyB.DesktopUI
         private string buscarvariable;
         private BindingSource bindingSource_usuario = new BindingSource();
         Contexto_SGlobalMoneyB_DB contexto;
+        SqlConnection con = new SqlConnection(@"Data Source=.;initial catalog=SGlobalMoneyB ;Integrated Security=true;");
         public bool estado;
         public frm_usuarios_mnt()
         {
             InitializeComponent();
+            cargar_grupos();
+            cargar_referidos();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -179,15 +183,43 @@ namespace SGlobalMoneyB.DesktopUI
                 dataGridView1.DataSource = lst.ToList();
             }
         }
-        /*
+        
         public void cargar_grupos()
         {
+            con.Open();
+            //Contexto_SGlobalMoneyB_DB contexto = new Contexto_SGlobalMoneyB_DB();
             //contexto.Open();
-            contexto = new Contexto_SGlobalMoneyB_DB();
-            SqlCommand cmd = new SqlCommand("SELECT id_Mantenimiento, Nombre_Mantenimiento FROM Mantenimiento", contexto);
+            SqlCommand cmd = new SqlCommand("SELECT Id, Nombre FROM Grupoes", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-        }*/
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Nombre"] = "SELECCIONE UNA OPCION";
+            dt.Rows.InsertAt(fila, 0);
+
+            comboBox2.ValueMember = "Id";
+            comboBox2.DisplayMember = "Nombre";
+            comboBox2.DataSource = dt;
+        }
+
+        public void cargar_referidos()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Id, Nombre FROM Referidoes", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Nombre"] = "SELECCIONE UNA OPCION";
+            dt.Rows.InsertAt(fila, 0);
+
+            comboBox1.ValueMember = "Id";
+            comboBox1.DisplayMember = "Nombre";
+            comboBox1.DataSource = dt;
+        }
     }
 }

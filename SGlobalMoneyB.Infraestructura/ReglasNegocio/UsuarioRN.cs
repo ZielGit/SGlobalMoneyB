@@ -1,4 +1,5 @@
 ﻿using SGlobalMoneyB.Core.Entidades;
+using SGlobalMoneyB.Core.Entidades.ViewModel;
 using SGlobalMoneyB.Core.Repositorios;
 using SGlobalMoneyB.Infraestructura.ContextoDB;
 using System;
@@ -32,6 +33,25 @@ namespace SGlobalMoneyB.Infraestructura.ReglasNegocio
         {
             contexto = new Contexto_SGlobalMoneyB_DB();
             return contexto.usuarios.ToList();
+        }
+
+        public IEnumerable<usuario> Listar()
+        {
+            contexto = new Contexto_SGlobalMoneyB_DB();
+            return contexto.usuarios.Select(u => new usuario() { 
+                Id = u.Id, 
+                Nombre = u.Nombre, 
+                Apellido = u.Apellido,
+                DNI = u.DNI,
+                Edad = u.Edad,
+                Genero = u.Genero,
+                Celular = u.Celular,
+                Direccion = u.Direccion,
+                Monto_Inicial = u.Monto_Inicial,
+                Fecha_Ingreso = u.Fecha_Ingreso,
+                grupo = u.Grupo.Nombre,
+                referido = u.Referido.Nombre
+            }).ToList();
         }
 
         public void Modificar(Usuario usuario)

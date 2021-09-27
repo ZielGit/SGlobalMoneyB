@@ -1,4 +1,5 @@
 ﻿using SGlobalMoneyB.Core.Entidades;
+using SGlobalMoneyB.Core.Entidades.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace SGlobalMoneyB.Core.Repositorios
         void Agregar(Usuario usuario);
         void Modificar(Usuario usuario);
         IEnumerable<Usuario> ListarUsuario();
+        IEnumerable<usuario> Listar();
         Usuario Buscar(int Id);
     }
 }

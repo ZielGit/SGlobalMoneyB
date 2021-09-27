@@ -46,11 +46,8 @@ namespace SGlobalMoneyB.DesktopUI
             textBox3.Clear();
             textBox4.Clear();
             textBox5.Clear();
-            //textBox7.Clear();
             textBox8.Clear();
             textBox9.Clear();
-            //textBox10.Clear();
-            //textBox11.Clear();
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -85,11 +82,12 @@ namespace SGlobalMoneyB.DesktopUI
                     Edad = int.Parse(textBox3.Text),
                     Genero = textBox4.Text,
                     Celular = int.Parse(textBox5.Text),
-                    referido = comboBox1.Text,
                     Direccion = textBox8.Text,
                     Monto_Inicial = int.Parse(textBox9.Text),
-                    grupo = comboBox2.Text,
-                    Fecha_Ingreso = dateTimePicker1.Value.Date
+                    Fecha_Ingreso = dateTimePicker1.Value.Date,
+                    referido = comboBox1.Text,
+                    //Referido = Convert.ToString(comboBox1.SelectedValue),
+                    grupo = comboBox2.Text
                 };
                 usuarioRN.Agregar(usuario);
                 MessageBox.Show("Datos Guardados");
@@ -124,7 +122,7 @@ namespace SGlobalMoneyB.DesktopUI
         private void frm_usuarios_mnt_Load(object sender, EventArgs e)
         {
             usuarioRN = new UsuarioRN();
-            bindingSource_usuario.DataSource = usuarioRN.ListarUsuario();
+            bindingSource_usuario.DataSource = usuarioRN.Listar();
             bindingNavigator1.BindingSource = bindingSource_usuario;
 
             dataGridView1.DataSource = bindingSource_usuario;

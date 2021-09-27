@@ -15,13 +15,14 @@ namespace SGlobalMoneyB.Infraestructura.ContextoDB
         public DbSet<Usuario> usuarios { get; set; }
         public DbSet<Referido> referidos { get; set; }
         public DbSet<Grupo> grupos { get; set; }
+        public DbSet<Fecha> fechas { get; set; }
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
-            //modelBuilder.Entity<Grupo>();
-                //.HasMany(e => e.Mantenimientoes)
-                //.WithOptional(e => e.Vehiculoes)
-                //.HasForeignKey(e => e.Vehiculo_Placa_Vehiculo);
+        //modelBuilder.Entity<Grupo>();
+        //.HasMany(e => e.Mantenimientoes)
+        //.WithOptional(e => e.Vehiculoes)
+        //.HasForeignKey(e => e.Vehiculo_Placa_Vehiculo);
 
         //}
     }

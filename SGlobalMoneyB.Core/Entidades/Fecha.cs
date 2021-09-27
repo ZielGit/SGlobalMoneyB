@@ -11,7 +11,6 @@ namespace SGlobalMoneyB.Core.Entidades
         public int Id { get; set; }
         public DateTime Fecha_retiro { get; set; }
         public int Dias { get; set; }
-        public decimal porcetaje { get; set; }
-        public int calculo { get; set; }
+        public int Retiro { get; set; }
     }
 }

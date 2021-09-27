@@ -1,5 +1,7 @@
-﻿using SGlobalMoneyB.Core.Entidades.ViewModel;
+﻿using SGlobalMoneyB.Core.Entidades;
+using SGlobalMoneyB.Core.Entidades.ViewModel;
 using SGlobalMoneyB.Infraestructura.ContextoDB;
+using SGlobalMoneyB.Infraestructura.ReglasNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +16,7 @@ namespace SGlobalMoneyB.DesktopUI
 {
     public partial class frm_fecha : Form
     {
+        private FechaRN fechaRN;
         private string buscarvariable;
         private double procentaje = 0.10;
         public frm_fecha()
@@ -55,8 +58,8 @@ namespace SGlobalMoneyB.DesktopUI
                     lst = lst.Where(d => d.Nombre.Contains(txtName.Text.Trim()));
                     buscarvariable = txtName.Text;
                 }
-                //dataGridView1.DataSource = lst.ToList();
                 //txtMonto.Text = lst.Monto_Inicial.ToString();
+                //falta logica
             }
         }
 
@@ -66,6 +69,19 @@ namespace SGlobalMoneyB.DesktopUI
             resultado = procentaje * Convert.ToInt32(txtMonto.Text) * Convert.ToInt32(txtResultado.Text);
 
             txtRetiro.Text = resultado.ToString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            fechaRN = new FechaRN();
+            Fecha fecha = new Fecha
+            {
+                Fecha_retiro = Fecha_hoy.Value.Date,
+                Dias = int.Parse(txtResultado.Text),
+                Retiro = int.Parse(txtRetiro.Text),
+            };
+            fechaRN.Agregar(fecha);
+            MessageBox.Show("Datos Guardados");
         }
     }
 }

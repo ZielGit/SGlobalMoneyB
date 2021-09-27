@@ -43,7 +43,7 @@ namespace SGlobalMoneyB.DesktopUI
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtRetiro = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtName
@@ -77,13 +77,13 @@ namespace SGlobalMoneyB.DesktopUI
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Calcular";
+            this.button2.Text = "Calcular Dia";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtResultado
             // 
-            this.txtResultado.Location = new System.Drawing.Point(141, 288);
+            this.txtResultado.Location = new System.Drawing.Point(141, 286);
             this.txtResultado.Name = "txtResultado";
             this.txtResultado.Size = new System.Drawing.Size(138, 20);
             this.txtResultado.TabIndex = 3;
@@ -111,11 +111,11 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(575, 288);
+            this.button3.Location = new System.Drawing.Point(314, 283);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 23);
             this.button3.TabIndex = 7;
-            this.button3.Text = "Guardar";
+            this.button3.Text = "Calcular Retiro";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -157,26 +157,27 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // txtRetiro
             // 
-            this.txtRetiro.Location = new System.Drawing.Point(435, 293);
+            this.txtRetiro.Location = new System.Drawing.Point(456, 283);
             this.txtRetiro.Name = "txtRetiro";
             this.txtRetiro.Size = new System.Drawing.Size(100, 20);
             this.txtRetiro.TabIndex = 12;
             // 
-            // label5
+            // button4
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(372, 298);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Retiro:";
+            this.button4.Location = new System.Drawing.Point(577, 344);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "Guardar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // frm_fecha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.txtRetiro);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -213,6 +214,6 @@ namespace SGlobalMoneyB.DesktopUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRetiro;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button4;
     }
 }

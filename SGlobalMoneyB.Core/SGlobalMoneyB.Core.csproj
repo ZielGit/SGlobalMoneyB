@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Fecha.cs" />
     <Compile Include="Entidades\Grupo.cs" />
     <Compile Include="Entidades\oReporteUsuario.cs" />
     <Compile Include="Entidades\Referido.cs" />

@@ -11,6 +11,6 @@ namespace SGlobalMoneyB.Core.Entidades
         public int Id { get; set; }
         public DateTime Fecha_retiro { get; set; }
         public int Dias { get; set; }
-        public int Retiro { get; set; }
+        public double Retiro { get; set; }
     }
 }

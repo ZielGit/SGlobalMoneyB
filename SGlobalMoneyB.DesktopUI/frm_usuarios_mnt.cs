@@ -122,7 +122,7 @@ namespace SGlobalMoneyB.DesktopUI
         private void frm_usuarios_mnt_Load(object sender, EventArgs e)
         {
             usuarioRN = new UsuarioRN();
-            bindingSource_usuario.DataSource = usuarioRN.Listar();
+            bindingSource_usuario.DataSource = usuarioRN.ListarUsuario();
             bindingNavigator1.BindingSource = bindingSource_usuario;
 
             dataGridView1.DataSource = bindingSource_usuario;

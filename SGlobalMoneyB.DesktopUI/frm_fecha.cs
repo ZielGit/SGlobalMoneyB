@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,9 @@ namespace SGlobalMoneyB.DesktopUI
     public partial class frm_fecha : Form
     {
         private FechaRN fechaRN;
-        private string buscarvariable;
-        private double procentaje = 0.10;
+        private double porcentaje = 0.10;
+        double ganancia;
+        SqlConnection con = new SqlConnection(@"Data Source=.;initial catalog=SGlobalMoneyB ;Integrated Security=true;");
         public frm_fecha()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace SGlobalMoneyB.DesktopUI
             DateTime Ingreso = Fecha_Ingreso.Value.Date;
             DateTime Final = Fecha_hoy.Value.Date;
 
-            TimeSpan tspam = Ingreso - Final;
+            TimeSpan tspam = Final - Ingreso;
             int dias = tspam.Days;
 
             txtResultado.Text = dias.ToString();
@@ -37,38 +39,39 @@ namespace SGlobalMoneyB.DesktopUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (Contexto_SGlobalMoneyB_DB db = new Contexto_SGlobalMoneyB_DB())
+            string consulta = "SELECT * FROM Usuarios WHERE Id='" + txtName.Text + "' ";
+
+            SqlCommand comando = new SqlCommand(consulta, con);
+            con.Open();
+
+            SqlDataReader leer = comando.ExecuteReader();
+            if(leer.Read() == true)
             {
-                var lst = (from d in db.usuarios
-                           select new usuario
-                           {
-                               Id = d.Id,
-                               Nombre = d.Nombre,
-                               Apellido = d.Apellido,
-                               DNI = d.DNI,
-                               Edad = d.Edad,
-                               Genero = d.Genero,
-                               Celular = d.Celular,
-                               Direccion = d.Direccion,
-                               Monto_Inicial = d.Monto_Inicial,
-                               Fecha_Ingreso = d.Fecha_Ingreso,
-                           }).AsQueryable();
-                if (!txtName.Text.Trim().Equals(""))
-                {
-                    lst = lst.Where(d => d.Nombre.Contains(txtName.Text.Trim()));
-                    buscarvariable = txtName.Text;
-                }
-                //txtMonto.Text = lst.Monto_Inicial.ToString();
-                //falta logica
+                txtMonto.Text = leer["Monto_Inicial"].ToString();
+                Fecha_Ingreso.Text = leer["Fecha_Ingreso"].ToString();
+                //MessageBox.Show("El registro se ha encontrado");
             }
+            else
+            {
+                MessageBox.Show("No existe");
+            }
+            con.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            double resultado;
-            resultado = procentaje * Convert.ToInt32(txtMonto.Text) * Convert.ToInt32(txtResultado.Text);
+            //double resultado;
+            //resultado = (porcentaje * Convert.ToInt32(txtMonto.Text)) * Convert.ToInt32(txtResultado.Text);
+            double Monto = int.Parse(txtMonto.Text);
+            for (int i=0;i<int.Parse(txtResultado.Text);i++)
+            {
+                ganancia =+ porcentaje * Monto;
+                //ganancia++;
+                Monto =+ Monto + ganancia;
+                //Monto++;
+            }
+            txtRetiro.Text = Monto.ToString();
 
-            txtRetiro.Text = resultado.ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -78,7 +81,7 @@ namespace SGlobalMoneyB.DesktopUI
             {
                 Fecha_retiro = Fecha_hoy.Value.Date,
                 Dias = int.Parse(txtResultado.Text),
-                Retiro = int.Parse(txtRetiro.Text),
+                Retiro = Double.Parse(txtRetiro.Text)
             };
             fechaRN.Agregar(fecha);
             MessageBox.Show("Datos Guardados");

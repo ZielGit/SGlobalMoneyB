@@ -82,5 +82,12 @@ namespace SGlobalMoneyB.DesktopUI
                 con.Dispose();
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            abrirformulariohijo(new frm_fecha());
+            this.Cursor = Cursors.Default;
+        }
     }
 }

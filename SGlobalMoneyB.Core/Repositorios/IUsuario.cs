@@ -12,6 +12,7 @@ namespace SGlobalMoneyB.Core.Repositorios
     {
         void Agregar(Usuario usuario);
         void Modificar(Usuario usuario);
+        void Eliminar(Usuario usuario);
         IEnumerable<Usuario> ListarUsuario();
         IEnumerable<usuario> Listar();
         Usuario Buscar(int Id);

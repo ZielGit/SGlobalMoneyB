@@ -28,6 +28,7 @@ namespace SGlobalMoneyB.Infraestructura.ReglasNegocio
                 Monto_Inicial = u.Monto_Inicial,
                 referido = u.referido,
                 grupo = u.grupo,
+                Hora = u.Hora,
                 Fecha_Ingreso = u.Fecha_Ingreso
             }).AsQueryable<oReporteUsuario>();
         }

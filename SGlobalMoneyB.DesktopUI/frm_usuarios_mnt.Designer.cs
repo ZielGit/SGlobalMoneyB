@@ -30,6 +30,8 @@ namespace SGlobalMoneyB.DesktopUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_usuarios_mnt));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -131,12 +133,38 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 3);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(977, 478);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(971, 471);
+            this.dataGridView1.TabIndex = 1;
             // 
             // tabPage2
             // 
@@ -221,32 +249,36 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(733, 214);
+            this.comboBox2.Location = new System.Drawing.Point(606, 185);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(204, 21);
+            this.comboBox2.Size = new System.Drawing.Size(225, 28);
             this.comboBox2.TabIndex = 28;
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(733, 21);
+            this.comboBox1.Location = new System.Drawing.Point(606, 64);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(204, 21);
+            this.comboBox1.Size = new System.Drawing.Size(225, 28);
             this.comboBox1.TabIndex = 27;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(737, 271);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(606, 231);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(225, 26);
             this.dateTimePicker1.TabIndex = 26;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(490, 271);
+            this.label13.Location = new System.Drawing.Point(456, 234);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(138, 20);
             this.label13.TabIndex = 24;
@@ -256,7 +288,7 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(490, 212);
+            this.label12.Location = new System.Drawing.Point(456, 190);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(58, 20);
             this.label12.TabIndex = 22;
@@ -264,17 +296,18 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // textBox9
             // 
+            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(733, 142);
+            this.textBox9.Location = new System.Drawing.Point(606, 145);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(204, 26);
+            this.textBox9.Size = new System.Drawing.Size(225, 26);
             this.textBox9.TabIndex = 21;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(490, 148);
+            this.label11.Location = new System.Drawing.Point(456, 148);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 20);
             this.label11.TabIndex = 20;
@@ -282,17 +315,18 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // textBox8
             // 
+            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(733, 86);
+            this.textBox8.Location = new System.Drawing.Point(606, 103);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(204, 26);
+            this.textBox8.Size = new System.Drawing.Size(225, 26);
             this.textBox8.TabIndex = 19;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(490, 86);
+            this.label10.Location = new System.Drawing.Point(456, 106);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 20);
             this.label10.TabIndex = 18;
@@ -302,7 +336,7 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(490, 22);
+            this.label9.Location = new System.Drawing.Point(456, 64);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(74, 20);
             this.label9.TabIndex = 16;
@@ -310,8 +344,9 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // textBox5
             // 
+            this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(265, 330);
+            this.textBox5.Location = new System.Drawing.Point(231, 276);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(204, 26);
             this.textBox5.TabIndex = 13;
@@ -320,7 +355,7 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 330);
+            this.label7.Location = new System.Drawing.Point(142, 279);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 20);
             this.label7.TabIndex = 12;
@@ -328,8 +363,14 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // textBox4
             // 
+            this.textBox4.AutoCompleteCustomSource.AddRange(new string[] {
+            "MASCULINO",
+            "FEMENINO"});
+            this.textBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(265, 265);
+            this.textBox4.Location = new System.Drawing.Point(231, 231);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(204, 26);
             this.textBox4.TabIndex = 11;
@@ -338,7 +379,7 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 265);
+            this.label6.Location = new System.Drawing.Point(144, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 20);
             this.label6.TabIndex = 10;
@@ -346,8 +387,9 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // textBox3
             // 
+            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(265, 206);
+            this.textBox3.Location = new System.Drawing.Point(231, 187);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(204, 26);
             this.textBox3.TabIndex = 9;
@@ -356,7 +398,7 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 206);
+            this.label5.Location = new System.Drawing.Point(144, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 8;
@@ -364,8 +406,9 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // textBox2
             // 
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(265, 142);
+            this.textBox2.Location = new System.Drawing.Point(231, 145);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(204, 26);
             this.textBox2.TabIndex = 7;
@@ -374,7 +417,7 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 142);
+            this.label4.Location = new System.Drawing.Point(144, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 20);
             this.label4.TabIndex = 6;
@@ -382,8 +425,9 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // textBox1
             // 
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(265, 83);
+            this.textBox1.Location = new System.Drawing.Point(231, 103);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(204, 26);
             this.textBox1.TabIndex = 5;
@@ -392,7 +436,7 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 83);
+            this.label3.Location = new System.Drawing.Point(144, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 4;
@@ -400,8 +444,9 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             // Tbx_Nombre
             // 
+            this.Tbx_Nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Tbx_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tbx_Nombre.Location = new System.Drawing.Point(265, 16);
+            this.Tbx_Nombre.Location = new System.Drawing.Point(231, 58);
             this.Tbx_Nombre.Name = "Tbx_Nombre";
             this.Tbx_Nombre.Size = new System.Drawing.Size(204, 26);
             this.Tbx_Nombre.TabIndex = 3;
@@ -410,7 +455,7 @@ namespace SGlobalMoneyB.DesktopUI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 22);
+            this.label2.Location = new System.Drawing.Point(144, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 2;
@@ -583,7 +628,6 @@ namespace SGlobalMoneyB.DesktopUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_guardar;
@@ -624,5 +668,6 @@ namespace SGlobalMoneyB.DesktopUI
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

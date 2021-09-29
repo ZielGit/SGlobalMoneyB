@@ -19,6 +19,7 @@ namespace SGlobalMoneyB.Core.Entidades
         public int Monto_Inicial { get; set; }
         public string referido { get; set; }
         public string grupo { get; set; }
+        public string Hora { get; set; }
         public DateTime Fecha_Ingreso { get; set; }
     }
 }

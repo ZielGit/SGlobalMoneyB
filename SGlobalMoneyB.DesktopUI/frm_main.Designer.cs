@@ -34,15 +34,15 @@ namespace SGlobalMoneyB.DesktopUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,11 +62,11 @@ namespace SGlobalMoneyB.DesktopUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Dubai", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(220, 7);
+            this.label1.Location = new System.Drawing.Point(206, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(795, 108);
+            this.label1.Size = new System.Drawing.Size(823, 108);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sistema de Getión de Datos";
+            this.label1.Text = "Sistema de Gestión de Datos";
             // 
             // panel2
             // 
@@ -83,6 +83,40 @@ namespace SGlobalMoneyB.DesktopUI
             this.panel2.Size = new System.Drawing.Size(233, 648);
             this.panel2.TabIndex = 1;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Location = new System.Drawing.Point(239, 120);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(996, 648);
+            this.panel3.TabIndex = 2;
+            // 
+            // button6
+            // 
+            this.button6.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Image = global::SGlobalMoneyB.DesktopUI.Properties.Resources.paperbag;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.Location = new System.Drawing.Point(-3, 444);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(2);
+            this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button6.Size = new System.Drawing.Size(233, 59);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Retiros";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.button6, "Reporte de Clientes");
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button5
             // 
             this.button5.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
@@ -95,6 +129,7 @@ namespace SGlobalMoneyB.DesktopUI
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Image = global::SGlobalMoneyB.DesktopUI.Properties.Resources.services;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.Location = new System.Drawing.Point(0, 509);
             this.button5.Name = "button5";
@@ -139,6 +174,7 @@ namespace SGlobalMoneyB.DesktopUI
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Enabled = false;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -196,10 +232,10 @@ namespace SGlobalMoneyB.DesktopUI
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::SGlobalMoneyB.DesktopUI.Properties.Resources.application_exit;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(0, 581);
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(0, 592);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 73);
+            this.button1.Size = new System.Drawing.Size(233, 56);
             this.button1.TabIndex = 1;
             this.button1.Text = "Cerrar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -216,39 +252,6 @@ namespace SGlobalMoneyB.DesktopUI
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Location = new System.Drawing.Point(239, 120);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(996, 648);
-            this.panel3.TabIndex = 2;
-            // 
-            // button6
-            // 
-            this.button6.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.Location = new System.Drawing.Point(3, 444);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(2);
-            this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button6.Size = new System.Drawing.Size(233, 59);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Retiros";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.button6, "Reporte de Clientes");
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // frm_main
             // 

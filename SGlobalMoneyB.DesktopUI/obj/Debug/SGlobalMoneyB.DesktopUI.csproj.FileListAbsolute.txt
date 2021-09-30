@@ -82,3 +82,6 @@ D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobal
 D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.exe
 D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.pdb
 D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.frm_report_dni.resources
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.frm_fecha.resources
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.frm_report_nombre.resources
+D:\Global Money Business\SGlobalMoneyB\SGlobalMoneyB.DesktopUI\obj\Debug\SGlobalMoneyB.DesktopUI.frm_backup.resources

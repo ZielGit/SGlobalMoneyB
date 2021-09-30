@@ -86,6 +86,7 @@ namespace SGlobalMoneyB.DesktopUI
                     Monto_Inicial = int.Parse(textBox9.Text),
                     Fecha_Ingreso = dateTimePicker1.Value.Date,
                     referido = comboBox1.Text,
+                    Hora = DateTime.Now.ToLongTimeString(),
                     //Referido = Convert.ToString(comboBox1.SelectedValue),
                     grupo = comboBox2.Text
                 };

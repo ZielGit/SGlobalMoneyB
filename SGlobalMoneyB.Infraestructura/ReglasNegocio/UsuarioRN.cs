@@ -59,5 +59,11 @@ namespace SGlobalMoneyB.Infraestructura.ReglasNegocio
             contexto.Entry(usuario).State = EntityState.Modified;
             contexto.SaveChanges();
         }
+
+        public void Eliminar(Usuario usuario)
+        {
+            contexto.Entry(usuario).State = EntityState.Deleted;
+            contexto.SaveChanges();
+        }
     }
 }

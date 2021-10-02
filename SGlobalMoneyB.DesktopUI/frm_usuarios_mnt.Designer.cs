@@ -30,8 +30,8 @@ namespace SGlobalMoneyB.DesktopUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_usuarios_mnt));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,27 +42,27 @@ namespace SGlobalMoneyB.DesktopUI
             this.btn_guardar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboGrupo = new System.Windows.Forms.ComboBox();
+            this.comboReferido = new System.Windows.Forms.ComboBox();
+            this.dateTimeFIngreso = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtbMonto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtbDireccion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtbCelular = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtbGenero = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtbEdad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtbDNI = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbApellido = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Tbx_Nombre = new System.Windows.Forms.TextBox();
+            this.txtbNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorButton1 = new System.Windows.Forms.ToolStripButton();
@@ -108,7 +108,6 @@ namespace SGlobalMoneyB.DesktopUI
             this.label1.Size = new System.Drawing.Size(427, 81);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestión de Usuarios";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabControl1
             // 
@@ -139,14 +138,14 @@ namespace SGlobalMoneyB.DesktopUI
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -156,12 +155,12 @@ namespace SGlobalMoneyB.DesktopUI
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(971, 471);
             this.dataGridView1.TabIndex = 1;
@@ -217,27 +216,27 @@ namespace SGlobalMoneyB.DesktopUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.comboGrupo);
+            this.panel2.Controls.Add(this.comboReferido);
+            this.panel2.Controls.Add(this.dateTimeFIngreso);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.textBox9);
+            this.panel2.Controls.Add(this.txtbMonto);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.txtbDireccion);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txtbCelular);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txtbGenero);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtbEdad);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtbDNI);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtbApellido);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.Tbx_Nombre);
+            this.panel2.Controls.Add(this.txtbNombre);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Enabled = false;
             this.panel2.Location = new System.Drawing.Point(13, 23);
@@ -245,34 +244,34 @@ namespace SGlobalMoneyB.DesktopUI
             this.panel2.Size = new System.Drawing.Size(958, 383);
             this.panel2.TabIndex = 1;
             // 
-            // comboBox2
+            // comboGrupo
             // 
-            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(606, 185);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(225, 28);
-            this.comboBox2.TabIndex = 28;
+            this.comboGrupo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboGrupo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboGrupo.FormattingEnabled = true;
+            this.comboGrupo.Location = new System.Drawing.Point(606, 185);
+            this.comboGrupo.Name = "comboGrupo";
+            this.comboGrupo.Size = new System.Drawing.Size(225, 28);
+            this.comboGrupo.TabIndex = 28;
             // 
-            // comboBox1
+            // comboReferido
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(606, 64);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(225, 28);
-            this.comboBox1.TabIndex = 27;
+            this.comboReferido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboReferido.FormattingEnabled = true;
+            this.comboReferido.Location = new System.Drawing.Point(606, 64);
+            this.comboReferido.Name = "comboReferido";
+            this.comboReferido.Size = new System.Drawing.Size(225, 28);
+            this.comboReferido.TabIndex = 27;
             // 
-            // dateTimePicker1
+            // dateTimeFIngreso
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(606, 231);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(225, 26);
-            this.dateTimePicker1.TabIndex = 26;
+            this.dateTimeFIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeFIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeFIngreso.Location = new System.Drawing.Point(606, 231);
+            this.dateTimeFIngreso.Name = "dateTimeFIngreso";
+            this.dateTimeFIngreso.Size = new System.Drawing.Size(225, 26);
+            this.dateTimeFIngreso.TabIndex = 26;
             // 
             // label13
             // 
@@ -294,14 +293,14 @@ namespace SGlobalMoneyB.DesktopUI
             this.label12.TabIndex = 22;
             this.label12.Text = "Grupo:";
             // 
-            // textBox9
+            // txtbMonto
             // 
-            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(606, 145);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(225, 26);
-            this.textBox9.TabIndex = 21;
+            this.txtbMonto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtbMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbMonto.Location = new System.Drawing.Point(606, 145);
+            this.txtbMonto.Name = "txtbMonto";
+            this.txtbMonto.Size = new System.Drawing.Size(225, 26);
+            this.txtbMonto.TabIndex = 21;
             // 
             // label11
             // 
@@ -313,14 +312,14 @@ namespace SGlobalMoneyB.DesktopUI
             this.label11.TabIndex = 20;
             this.label11.Text = "Monto:";
             // 
-            // textBox8
+            // txtbDireccion
             // 
-            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(606, 103);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(225, 26);
-            this.textBox8.TabIndex = 19;
+            this.txtbDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbDireccion.Location = new System.Drawing.Point(606, 103);
+            this.txtbDireccion.Name = "txtbDireccion";
+            this.txtbDireccion.Size = new System.Drawing.Size(225, 26);
+            this.txtbDireccion.TabIndex = 19;
             // 
             // label10
             // 
@@ -342,14 +341,14 @@ namespace SGlobalMoneyB.DesktopUI
             this.label9.TabIndex = 16;
             this.label9.Text = "Referido:";
             // 
-            // textBox5
+            // txtbCelular
             // 
-            this.textBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(231, 276);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(204, 26);
-            this.textBox5.TabIndex = 13;
+            this.txtbCelular.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtbCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbCelular.Location = new System.Drawing.Point(231, 276);
+            this.txtbCelular.Name = "txtbCelular";
+            this.txtbCelular.Size = new System.Drawing.Size(204, 26);
+            this.txtbCelular.TabIndex = 13;
             // 
             // label7
             // 
@@ -361,19 +360,19 @@ namespace SGlobalMoneyB.DesktopUI
             this.label7.TabIndex = 12;
             this.label7.Text = "Celular:";
             // 
-            // textBox4
+            // txtbGenero
             // 
-            this.textBox4.AutoCompleteCustomSource.AddRange(new string[] {
+            this.txtbGenero.AutoCompleteCustomSource.AddRange(new string[] {
             "MASCULINO",
             "FEMENINO"});
-            this.textBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(231, 231);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(204, 26);
-            this.textBox4.TabIndex = 11;
+            this.txtbGenero.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtbGenero.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtbGenero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbGenero.Location = new System.Drawing.Point(231, 231);
+            this.txtbGenero.Name = "txtbGenero";
+            this.txtbGenero.Size = new System.Drawing.Size(204, 26);
+            this.txtbGenero.TabIndex = 11;
             // 
             // label6
             // 
@@ -385,14 +384,14 @@ namespace SGlobalMoneyB.DesktopUI
             this.label6.TabIndex = 10;
             this.label6.Text = "Genero:";
             // 
-            // textBox3
+            // txtbEdad
             // 
-            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(231, 187);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(204, 26);
-            this.textBox3.TabIndex = 9;
+            this.txtbEdad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtbEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbEdad.Location = new System.Drawing.Point(231, 187);
+            this.txtbEdad.Name = "txtbEdad";
+            this.txtbEdad.Size = new System.Drawing.Size(204, 26);
+            this.txtbEdad.TabIndex = 9;
             // 
             // label5
             // 
@@ -404,14 +403,14 @@ namespace SGlobalMoneyB.DesktopUI
             this.label5.TabIndex = 8;
             this.label5.Text = "Edad:";
             // 
-            // textBox2
+            // txtbDNI
             // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(231, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 26);
-            this.textBox2.TabIndex = 7;
+            this.txtbDNI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtbDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbDNI.Location = new System.Drawing.Point(231, 145);
+            this.txtbDNI.Name = "txtbDNI";
+            this.txtbDNI.Size = new System.Drawing.Size(204, 26);
+            this.txtbDNI.TabIndex = 7;
             // 
             // label4
             // 
@@ -423,14 +422,14 @@ namespace SGlobalMoneyB.DesktopUI
             this.label4.TabIndex = 6;
             this.label4.Text = "DNI:";
             // 
-            // textBox1
+            // txtbApellido
             // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(231, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 26);
-            this.textBox1.TabIndex = 5;
+            this.txtbApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtbApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbApellido.Location = new System.Drawing.Point(231, 103);
+            this.txtbApellido.Name = "txtbApellido";
+            this.txtbApellido.Size = new System.Drawing.Size(204, 26);
+            this.txtbApellido.TabIndex = 5;
             // 
             // label3
             // 
@@ -442,14 +441,14 @@ namespace SGlobalMoneyB.DesktopUI
             this.label3.TabIndex = 4;
             this.label3.Text = "Apellido:";
             // 
-            // Tbx_Nombre
+            // txtbNombre
             // 
-            this.Tbx_Nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Tbx_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tbx_Nombre.Location = new System.Drawing.Point(231, 58);
-            this.Tbx_Nombre.Name = "Tbx_Nombre";
-            this.Tbx_Nombre.Size = new System.Drawing.Size(204, 26);
-            this.Tbx_Nombre.TabIndex = 3;
+            this.txtbNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbNombre.Location = new System.Drawing.Point(231, 58);
+            this.txtbNombre.Name = "txtbNombre";
+            this.txtbNombre.Size = new System.Drawing.Size(204, 26);
+            this.txtbNombre.TabIndex = 3;
             // 
             // label2
             // 
@@ -632,24 +631,24 @@ namespace SGlobalMoneyB.DesktopUI
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbApellido;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Tbx_Nombre;
+        private System.Windows.Forms.TextBox txtbNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtbMonto;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtbDireccion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtbCelular;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtbGenero;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtbEdad;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtbDNI;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorButton1;
@@ -665,9 +664,9 @@ namespace SGlobalMoneyB.DesktopUI
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextNombre;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimeFIngreso;
+        private System.Windows.Forms.ComboBox comboGrupo;
+        private System.Windows.Forms.ComboBox comboReferido;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

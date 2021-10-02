@@ -20,43 +20,37 @@ namespace SGlobalMoneyB.DesktopUI
         private UsuarioRN usuarioRN;
         private string buscarvariable;
         private BindingSource bindingSource_usuario = new BindingSource();
-        //Contexto_SGlobalMoneyB_DB contexto;
         SqlConnection con = new SqlConnection(@"Data Source=.;initial catalog=SGlobalMoneyB ;Integrated Security=true;");
         public bool estado;
         public frm_usuarios_mnt()
         {
             InitializeComponent();
-            cargar_grupos();
-            cargar_referidos();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            cargarGrupo();
+            //cargarReferido();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             estado = true;
             panel2.Enabled = true;
-            Tbx_Nombre.Focus();
-            Tbx_Nombre.ResetText();
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox8.Clear();
-            textBox9.Clear();
+            txtbNombre.Focus();
+            txtbNombre.ResetText();
+            txtbApellido.Clear();
+            txtbDNI.Clear();
+            txtbEdad.Clear();
+            txtbGenero.Clear();
+            txtbCelular.Clear();
+            txtbDireccion.Clear();
+            txtbMonto.Clear();
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             #region Bloque que valida los objetos de entrada
-            if (string.IsNullOrEmpty(Tbx_Nombre.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text)
-                || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) //|| string.IsNullOrEmpty(comboBox1.Text)
-                || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text) //|| string.IsNullOrEmpty(comboBox2.Text)
-                || string.IsNullOrEmpty(dateTimePicker1.Text))
+            if (string.IsNullOrEmpty(txtbNombre.Text) || string.IsNullOrEmpty(txtbDNI.Text) || string.IsNullOrEmpty(txtbEdad.Text)
+                || string.IsNullOrEmpty(txtbGenero.Text) || string.IsNullOrEmpty(txtbCelular.Text) //|| string.IsNullOrEmpty(comboBox1.Text)
+                || string.IsNullOrEmpty(txtbDireccion.Text) || string.IsNullOrEmpty(txtbMonto.Text) //|| string.IsNullOrEmpty(comboBox2.Text)
+                || string.IsNullOrEmpty(dateTimeFIngreso.Text))
             {
                 panel2.BackColor = Color.FromArgb(219, 81, 69);
                 MessageBox.Show("Completa los Datos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,25 +67,24 @@ namespace SGlobalMoneyB.DesktopUI
             #region Haciendo datos persistentes en el contexto (BD)
             if (estado)
             {
-                var grupo = (Grupo)comboBox2.SelectedItem;
+                var grupo = (Grupo)comboGrupo.SelectedItem;
+                var referido = (Referido)comboReferido.SelectedItem;
 
                 usuarioRN = new UsuarioRN();
                 Usuario usuario = new Usuario
                 {
-                    Nombre = Tbx_Nombre.Text,
-                    Apellido = textBox1.Text,
-                    DNI = textBox2.Text,
-                    Edad = int.Parse(textBox3.Text),
-                    Genero = textBox4.Text,
-                    Celular = int.Parse(textBox5.Text),
-                    Direccion = textBox8.Text,
-                    Monto_Inicial = int.Parse(textBox9.Text),
-                    Fecha_Ingreso = dateTimePicker1.Value.Date,
-                    //referido = comboBox1.Text,
+                    Nombre = txtbNombre.Text,
+                    Apellido = txtbApellido.Text,
+                    DNI = txtbDNI.Text,
+                    Edad = int.Parse(txtbEdad.Text),
+                    Genero = txtbGenero.Text,
+                    Celular = int.Parse(txtbCelular.Text),
+                    Direccion = txtbDireccion.Text,
+                    Monto_Inicial = int.Parse(txtbMonto.Text),
+                    Fecha_Ingreso = dateTimeFIngreso.Value.Date,
                     Hora = DateTime.Now.ToLongTimeString(),
-                    //Referido = Convert.ToString(comboBox1.SelectedValue),
-                    // Grupo_Id = int.Parse(comboBox2.Text),
-                    // grupo = comboBox2.Text
+                    //referido = comboReferido.Text,
+                    //grupo = comboGrupo.Text,
                     Grupo = grupo
                 };
                 usuarioRN.Agregar(usuario);
@@ -101,17 +94,17 @@ namespace SGlobalMoneyB.DesktopUI
             {
                 Usuario usuario = usuarioRN.Buscar(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
 
-                usuario.Nombre = Tbx_Nombre.Text;
-                usuario.Apellido = textBox1.Text;
-                usuario.DNI = textBox2.Text;
-                usuario.Edad = int.Parse(textBox3.Text);
-                usuario.Genero = textBox4.Text;
-                usuario.Celular = int.Parse(textBox5.Text);
-                usuario.referido = comboBox1.Text;
-                usuario.Direccion = textBox8.Text;
-                usuario.Monto_Inicial = int.Parse(textBox9.Text);
-                usuario.grupo = comboBox2.Text;
-                usuario.Fecha_Ingreso = dateTimePicker1.Value.Date;
+                usuario.Nombre = txtbNombre.Text;
+                usuario.Apellido = txtbApellido.Text;
+                usuario.DNI = txtbDNI.Text;
+                usuario.Edad = int.Parse(txtbEdad.Text);
+                usuario.Genero = txtbGenero.Text;
+                usuario.Celular = int.Parse(txtbCelular.Text);
+                //usuario.referido = comboReferido.Text;
+                usuario.Direccion = txtbDireccion.Text;
+                usuario.Monto_Inicial = int.Parse(txtbMonto.Text);
+                usuario.grupo = comboGrupo.Text;
+                usuario.Fecha_Ingreso = dateTimeFIngreso.Value.Date;
 
                 usuarioRN.Modificar(usuario);
                 MessageBox.Show("Datos actualizados con éxito...");
@@ -143,17 +136,17 @@ namespace SGlobalMoneyB.DesktopUI
                     estado = false;
                     Usuario usuario = usuarioRN.Buscar(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
 
-                    Tbx_Nombre.Text = usuario.Nombre;
-                    textBox1.Text = usuario.Apellido;
-                    textBox2.Text = usuario.DNI;
-                    textBox3.Text = usuario.Edad.ToString();
-                    textBox4.Text = usuario.Genero;
-                    textBox5.Text = usuario.Celular.ToString();
-                    comboBox1.Text = usuario.referido;
-                    textBox8.Text = usuario.Direccion;
-                    textBox9.Text = usuario.Monto_Inicial.ToString();
-                    comboBox2.Text = usuario.grupo;
-                    dateTimePicker1.Text = usuario.Fecha_Ingreso.ToString();
+                    txtbNombre.Text = usuario.Nombre;
+                    txtbApellido.Text = usuario.Apellido;
+                    txtbDNI.Text = usuario.DNI;
+                    txtbEdad.Text = usuario.Edad.ToString();
+                    txtbGenero.Text = usuario.Genero;
+                    txtbCelular.Text = usuario.Celular.ToString();
+                    comboReferido.Text = usuario.referido;
+                    txtbDireccion.Text = usuario.Direccion;
+                    txtbMonto.Text = usuario.Monto_Inicial.ToString();
+                    comboGrupo.Text = usuario.grupo;
+                    dateTimeFIngreso.Text = usuario.Fecha_Ingreso.ToString();
 
                     tabControl1.SelectedTab = tabPage2;
                 }
@@ -189,43 +182,65 @@ namespace SGlobalMoneyB.DesktopUI
             }
         }
         
-        public void cargar_grupos()
+        public void cargarGrupo()
         {
+            using (Contexto_SGlobalMoneyB_DB db = new Contexto_SGlobalMoneyB_DB())
+            {
+                var listagrupo = (from d in db.grupos select d).ToList();
+                comboGrupo.DataSource = listagrupo;
+
+                comboGrupo.DisplayMember = "Nombre";
+                comboGrupo.ValueMember = "Id";
+            }
+        }
+
+        public void cargarReferido()
+        {
+            using (Contexto_SGlobalMoneyB_DB db = new Contexto_SGlobalMoneyB_DB())
+            {
+                var listareferido = (from d in db.referidos select d).ToList();
+                comboGrupo.DataSource = listareferido;
+
+                comboGrupo.DisplayMember = "Nombre";
+                comboGrupo.ValueMember = "Id";
+            }
+        }
+
+        //public void cargar_grupos()
+        //{
             
-            con.Open();
-            //Contexto_SGlobalMoneyB_DB contexto = new Contexto_SGlobalMoneyB_DB();
-            //contexto.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Id, Nombre FROM Grupoes", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            con.Close();
+        //    con.Open();
+        //    SqlCommand cmd = new SqlCommand("SELECT Id, Nombre FROM Grupoes", con);
+        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //    DataTable dt = new DataTable();
+        //    da.Fill(dt);
+        //    con.Close();
 
-            DataRow fila = dt.NewRow();
-            fila["Nombre"] = "SELECCIONE UNA OPCION";
-            dt.Rows.InsertAt(fila, 0);
+        //    DataRow fila = dt.NewRow();
+        //    fila["Nombre"] = "SELECCIONE UNA OPCION";
+        //    dt.Rows.InsertAt(fila, 0);
 
-            comboBox2.ValueMember = "Id";
-            comboBox2.DisplayMember = "Nombre";
-            comboBox2.DataSource = dt;
-        }
+        //    comboGrupo.ValueMember = "Id";
+        //    comboGrupo.DisplayMember = "Nombre";
+        //    comboGrupo.DataSource = dt;
+        //}
 
-        public void cargar_referidos()
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Id, Nombre FROM Referidoes", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            con.Close();
+        //public void cargar_referidos()
+        //{
+        //    con.Open();
+        //    SqlCommand cmd = new SqlCommand("SELECT Id, Nombre FROM Referidoes", con);
+        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //    DataTable dt = new DataTable();
+        //    da.Fill(dt);
+        //    con.Close();
 
-            DataRow fila = dt.NewRow();
-            fila["Nombre"] = "SELECCIONE UNA OPCION";
-            dt.Rows.InsertAt(fila, 0);
+        //    DataRow fila = dt.NewRow();
+        //    fila["Nombre"] = "SELECCIONE UNA OPCION";
+        //    dt.Rows.InsertAt(fila, 0);
 
-            comboBox1.ValueMember = "Id";
-            comboBox1.DisplayMember = "Nombre";
-            comboBox1.DataSource = dt;
-        }
+        //    comboReferido.ValueMember = "Id";
+        //    comboReferido.DisplayMember = "Nombre";
+        //    comboReferido.DataSource = dt;
+        //}
     }
 }

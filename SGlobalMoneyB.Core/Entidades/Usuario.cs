@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SGlobalMoneyB.Core.Entidades
 {
@@ -21,6 +23,8 @@ namespace SGlobalMoneyB.Core.Entidades
         public string grupo { get; set; }
         public string Hora { get; set; }
         public DateTime Fecha_Ingreso { get; set; }
+        public int? Grupo_Id { get; set; }
+        [ForeignKey("Grupo_Id")]
         public virtual Grupo Grupo { get; set; }
         public virtual Referido Referido { get; set; }
     }

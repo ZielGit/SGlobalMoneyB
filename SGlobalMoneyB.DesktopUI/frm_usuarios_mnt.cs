@@ -54,8 +54,8 @@ namespace SGlobalMoneyB.DesktopUI
         {
             #region Bloque que valida los objetos de entrada
             if (string.IsNullOrEmpty(Tbx_Nombre.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text)
-                || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) || string.IsNullOrEmpty(comboBox1.Text)
-                || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text) || string.IsNullOrEmpty(comboBox2.Text)
+                || string.IsNullOrEmpty(textBox4.Text) || string.IsNullOrEmpty(textBox5.Text) //|| string.IsNullOrEmpty(comboBox1.Text)
+                || string.IsNullOrEmpty(textBox8.Text) || string.IsNullOrEmpty(textBox9.Text) //|| string.IsNullOrEmpty(comboBox2.Text)
                 || string.IsNullOrEmpty(dateTimePicker1.Text))
             {
                 panel2.BackColor = Color.FromArgb(219, 81, 69);
@@ -73,6 +73,8 @@ namespace SGlobalMoneyB.DesktopUI
             #region Haciendo datos persistentes en el contexto (BD)
             if (estado)
             {
+                var grupo = (Grupo)comboBox2.SelectedItem;
+
                 usuarioRN = new UsuarioRN();
                 Usuario usuario = new Usuario
                 {
@@ -85,10 +87,12 @@ namespace SGlobalMoneyB.DesktopUI
                     Direccion = textBox8.Text,
                     Monto_Inicial = int.Parse(textBox9.Text),
                     Fecha_Ingreso = dateTimePicker1.Value.Date,
-                    referido = comboBox1.Text,
+                    //referido = comboBox1.Text,
                     Hora = DateTime.Now.ToLongTimeString(),
                     //Referido = Convert.ToString(comboBox1.SelectedValue),
-                    grupo = comboBox2.Text
+                    // Grupo_Id = int.Parse(comboBox2.Text),
+                    // grupo = comboBox2.Text
+                    Grupo = grupo
                 };
                 usuarioRN.Agregar(usuario);
                 MessageBox.Show("Datos Guardados");

@@ -20,6 +20,8 @@ namespace SGlobalMoneyB.Core.Entidades.ViewModel
         public string referido { get; set; }
         public string grupo { get; set; }
         public string Hora { get; set; }
+        // se agrego el siguiente campo
+        public int Grupo_Id { get; set; }
         public DateTime Fecha_Ingreso { get; set; }
     }
 }

@@ -22,6 +22,25 @@ namespace SGlobalMoneyB.Infraestructura.ReglasNegocio
             contexto.SaveChanges();
         }
 
+        public void AgregarUsuario(Usuario usuario)
+        {
+            contexto = new Contexto_SGlobalMoneyB_DB();
+            var user = new usuario();
+            usuario.Nombre = user.Nombre;
+            usuario.Apellido = user.Apellido;
+            usuario.DNI = user.DNI;
+            usuario.Edad = user.Edad;
+            usuario.Genero = user.Genero;
+            usuario.Celular = user.Celular;
+            usuario.Direccion = user.Direccion;
+            usuario.Monto_Inicial = user.Monto_Inicial;
+            usuario.Fecha_Ingreso = user.Fecha_Ingreso;
+            usuario.Hora = user.Hora;
+            usuario.Grupo_Id = user.Grupo_Id;
+            contexto.usuarios.Add(usuario);
+            contexto.SaveChanges();
+        }
+
         public Usuario Buscar(int Id)
         {
             contexto = new Contexto_SGlobalMoneyB_DB();
